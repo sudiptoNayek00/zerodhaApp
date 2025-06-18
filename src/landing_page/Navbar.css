@@ -1,0 +1,136 @@
+.nav-root {
+    background: #f8fafc;
+    box-shadow: 0 2px 6px rgba(60, 60, 60, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 18px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.nav-logo {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+/* Hamburger menu button */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-toggle-bar {
+    width: 26px;
+    height: 3px;
+    background: #283593;
+    border-radius: 2px;
+    transition: 0.25s;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #263238;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.15s, color 0.15s;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background: #e3edfa;
+    color: #1565c0;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .nav-container {
+        height: 56px;
+    }
+
+    .nav-logo {
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        padding: 0 8px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: #f8fafc;
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+        padding: 0;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 4px 12px rgba(60, 60, 60, 0.08);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        z-index: 90;
+    }
+
+    .nav-links.nav-links-open {
+        max-height: 400px;
+        padding: 8px 0;
+        transition: max-height 0.4s;
+    }
+
+    .nav-link {
+        padding: 12px 18px;
+        font-size: 1.08rem;
+        border-radius: 0;
+        border-bottom: 1px solid #e3e8ef;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }}
+ 
+
+    .active {
+        background: #e3edfa;
+        color: #1565c0;
+    }
