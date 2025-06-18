@@ -32,7 +32,7 @@ function LoginPage() {
           showConfirmButton: false,
           timer: 1500,
         }).then(() => {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "zerodha-dashboard-hazel.vercel.app";
         });
       } catch (err) {
         const backendMsg = err.response?.data?.message || "Unknown error";
