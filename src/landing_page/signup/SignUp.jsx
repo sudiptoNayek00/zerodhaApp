@@ -29,7 +29,7 @@ const formik=useFormik({
   validationSchema: userSchema,
   onSubmit:async (values,{resetForm}) => {
    await axios
-      .post("https://zerodhaapp-ajjs.onrender.com/api/client/signup", values)
+      .post("https://zerodha-backend-1-lr1u.onrender.com/api/client/signup", values)
       .then((res) => {
         console.log(res.data);
         resetForm();
