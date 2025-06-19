@@ -25,7 +25,7 @@ function ForgotPassword() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/client/forget-password",
+        "https://zerodha-backend-1-lr1u.onrender.com/api/client/forget-password",
         { email: values.email }
       );
       setMsg(response.data.message);
