@@ -14,7 +14,7 @@ export default function ResetPassword() {
 
   useEffect(() => {
     axios
-      .get(`https://localhost:5000/api/client/reset-password/${id}/${token}`)
+      .get(`https://zerodha-backend-1-lr1u.onrender.com/api/client/reset-password/${id}/${token}`)
       .then(() => {
         setValid(true);
         setLoading(false);
